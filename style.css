@@ -6,9 +6,31 @@
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ff0157;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 p{
     color: #111;
     text-align: center;
+}
+.left-text{
+    text-align: left;
 }
 .banner{
     position: relative;
@@ -17,7 +39,7 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
-    background:url(./images/Front.png);
+    background:url(./images/landing.jpg);
     background-size: cover;
 }
 .banner .content{
@@ -31,6 +53,7 @@ p{
 .banner .content p{
     font-size: 1em;
     color: #fff;
+    max-width: 1000px;
 }
 .btn{
     font-size: 1em;
@@ -122,17 +145,21 @@ section{
 }
 .row .col50 .imgbx{
     position: relative;
-    width: 100%;
-    /* min-height: 300px; */
     height: 100%;
 }
-.row .col50 .imgbx img{
+.about-img{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all 0.5s;
+}
+.about-img:hover{
+    transition: all 0.5s;
+    border-radius: 10px;
+    opacity: 0.9;
 }
 .title{
     width: 100%;
@@ -166,10 +193,24 @@ section{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all 0.5s;
+}
+.menu .content .box .imgbx img:hover{
+    transition: all 0.5s;
+    border-radius: 20px;
+    opacity: 0.6;
 }
 .menu .content .box .text h3{
     font-weight: 400;
     color: #111;
+    text-align: center;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.menu .content .box .text h3:hover{
+    transition: all 1s;
+    transform: rotate(360deg);
+    color: #ff0157;
 }
 .expert .content{
     display: flex;
@@ -194,13 +235,27 @@ section{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all 0.5s;
+}
+.expert .content .box .imgbx img:hover{
+    transition: all 0.5s;
+    opacity: 0.5;
+    border-radius: 25px;
 }
 .expert .content .box .text h3{
     font-weight: 400;
     color: #111;
+    text-align: center;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.expert .content .box .text h3:hover{
+    transition: all 1s;
+    transform: rotate(360deg);
+    color: #ff0157;
 }
 .testimonial{
-    background: url(./images/back.jpg);
+    background: url(./images/landing.jpg);
     background-size: cover;
 }
 .white .titleText,
